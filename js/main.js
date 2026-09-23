@@ -18,7 +18,7 @@ function projectHTML(p) {
   return `
     <article class="project reveal">
       <figure class="project-media">
-        <img src="${p.image}" alt="${p.alt}" loading="lazy" />
+        ${p.svg}
       </figure>
       <div class="project-info">
         <p class="project-meta">
@@ -75,4 +75,19 @@ if ("IntersectionObserver" in window && sections.length) {
     { rootMargin: "-40% 0px -55% 0px" }
   );
   sections.forEach((s) => spyIO.observe(s));
+}
+
+/* ---------- 主题切换 ---------- */
+const themeBtn = document.getElementById("theme-toggle");
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const next =
+      document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    if (next === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
 }

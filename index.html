@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    /* 提前应用主题，避免刷新时浅色页面闪烁 */
+    (function () {
+      try {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>周燕苹 · 个人作品集</title>
   <meta name="description" content="周燕苹的个人作品集：项目经历、技能与联系方式。" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0B14'/%3E%3Ctext x='5' y='21' font-family='monospace' font-size='13' fill='%238B5CF6'%3E%3E_%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
 </head>
 <body>
   <div class="layout">
@@ -20,21 +30,29 @@
       <div class="sidebar-top">
         <div class="avatar" aria-hidden="true">
           <!-- 涂鸦头像：戴耳机的眼镜程序员 -->
-          <svg viewBox="0 0 120 120" role="img" aria-label="手绘头像：戴耳机的眼镜程序员">
-            <g fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 120 120" role="img" aria-label="手绘头像：戴耳机的眼镜程序员" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <!-- 脸（圆） -->
               <path d="M61 18 C 86 17, 103 35, 102 60 C 101 86, 84 103, 59 103 C 34 103, 17 85, 18 59 C 19 35, 37 19, 61 18"/>
+              <!-- 头发（顶部弧线） -->
               <path d="M16 62 C 12 34, 34 12, 60 12 C 86 12, 108 34, 104 62"/>
+              <!-- 耳机左右 -->
               <rect x="8" y="58" width="13" height="21" rx="6"/>
               <rect x="99" y="58" width="13" height="21" rx="6"/>
+              <!-- 刘海（两笔） -->
               <path d="M42 25 C 47 16, 56 13, 63 15" stroke-width="2"/>
               <path d="M52 21 C 58 14, 68 13, 74 17" stroke-width="2"/>
+              <!-- 眼镜 -->
               <circle cx="46" cy="61" r="10" stroke-width="2"/>
               <circle cx="74" cy="61" r="10" stroke-width="2"/>
+              <!-- 鼻梁 -->
               <path d="M56 61 C 58 59, 62 59, 64 61" stroke-width="2"/>
+              <!-- 微笑 -->
               <path d="M50 82 C 55 88, 65 88, 70 82" stroke-width="2"/>
             </g>
-            <circle cx="46" cy="61" r="2.6" fill="#8B5CF6"/>
-            <circle cx="74" cy="61" r="2.6" fill="#8B5CF6"/>
+            <!-- 眼睛瞳孔（实心） -->
+            <circle cx="46" cy="61" r="2.6" fill="currentColor"/>
+            <circle cx="74" cy="61" r="2.6" fill="currentColor"/>
           </svg>
         </div>
         <div class="id-block">
@@ -73,6 +91,16 @@
           <a href="https://yangping.dev" target="_blank" rel="noreferrer">Homepage</a>
         </div>
       </div>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换主题" title="切换主题">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 3v2M12 19v2M5 12H3M21 12h-2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
 
     </aside>
 
@@ -193,7 +221,7 @@
     </main>
   </div>
 
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/data.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
