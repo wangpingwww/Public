@@ -1,0 +1,38 @@
+# OS 临时文件
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# 编辑器临时与备份文件
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+*.rej
+
+# 日志文件
+*.log
+logs/
+
+# 环境变量与本地配置
+.env
+.env.local
+.env.*.local
+
+# 依赖目录（如未来引入）
+node_modules/
+bower_components/
+
+# 构建产物（如未来引入）
+build/
+dist/
+.cache/
+
+# VS Code / IDE 工作区配置
+.vscode/
+.idea/
+*.iml

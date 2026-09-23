@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="16" y="16" width="768" height="468" rx="12" fill="none" stroke="#e4ddf5" stroke-width="2"/>
+  <!-- 终端窗口 -->
+  <path d="M172 118 C 320 110, 480 112, 628 120 C 636 200, 636 300, 628 372 C 470 380, 320 378, 174 370 C 166 292, 166 196, 172 118 Z" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M173 170 C 320 163, 480 164, 627 171" stroke="#8B5CF6" stroke-width="2" fill="none"/>
+  <circle cx="212" cy="144" r="7" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  <circle cx="240" cy="143" r="7" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  <circle cx="268" cy="144" r="7" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="212" y="240" font-family="Consolas, 'Courier New', monospace" font-size="30" fill="#8B5CF6">&gt; review --full</text>
+  <text x="212" y="288" font-family="Consolas, 'Courier New', monospace" font-size="20" fill="#9a92b2">analyzing ...</text>
+  <!-- 被划掉的 bug -->
+  <g fill="none" stroke="#9a92b2" stroke-width="2.5" stroke-linecap="round">
+    <ellipse cx="520" cy="284" rx="10" ry="14"/>
+    <circle cx="520" cy="262" r="6"/>
+    <path d="M516 257 L 511 250 M 524 257 L 529 250"/>
+    <path d="M510 276 L 498 271 M 510 284 L 496 284 M 511 292 L 500 299 M 530 276 L 542 271 M 530 284 L 544 284 M 529 292 L 540 299"/>
+  </g>
+  <g fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round">
+    <path d="M494 308 L 548 252"/>
+    <path d="M494 252 L 548 308"/>
+  </g>
+  <text x="172" y="448" font-family="Consolas, 'Courier New', monospace" font-size="18" fill="#8a82a3">// LLM + RAG 代码审查</text>
+</svg>

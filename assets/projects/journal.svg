@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="16" y="16" width="768" height="468" rx="12" fill="none" stroke="#e4ddf5" stroke-width="2"/>
+  <!-- 摊开的手账本 -->
+  <path d="M232 148 C 300 138, 356 140, 400 152 C 444 140, 500 138, 568 148 L 568 356 C 500 346, 444 348, 400 360 C 356 348, 300 346, 232 356 Z" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 152 L 400 360" stroke="#8B5CF6" stroke-width="2" fill="none"/>
+  <!-- 左页：手写线条 -->
+  <path d="M268 208 C 305 202, 340 210, 368 204" stroke="#9a92b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M268 244 C 300 238, 338 246, 366 240" stroke="#9a92b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M268 280 C 312 274, 342 282, 366 276" stroke="#9a92b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- 右页：星星贴纸 -->
+  <path d="M470 206 l9 18 20 3 -14 14 3 20 -18 -10 -18 10 3 -20 -14 -14 20 -3 Z" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- 右页：爱心 -->
+  <path d="M516 268 c -9 -11 -25 -2 -18 10 c 4 8 18 16 18 16 c 0 0 14 -8 18 -16 c 7 -12 -9 -21 -18 -10" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 和纸胶带 -->
+  <rect x="376" y="128" width="48" height="24" rx="3" fill="#8B5CF6" opacity="0.25" transform="rotate(-5 400 140)"/>
+  <text x="232" y="452" font-family="Consolas, 'Courier New', monospace" font-size="18" fill="#8a82a3">// 手绘手账 · Canvas + IndexedDB</text>
+</svg>
